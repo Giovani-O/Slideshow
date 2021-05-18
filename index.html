@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Displaying Data</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="main">
+        <div id="sidebar">
+            <ul id="sidebar-ul">
+                <li class="sidebar-text" onclick="selectSeason(0)">Summer</li>
+                <li class="sidebar-text" onclick="selectSeason(1)"">Autumn</li>
+                <li class="sidebar-text" onclick="selectSeason(2)"">Winter</li>
+                <li class="sidebar-text" onclick="selectSeason(3)"">Spring</li>
+            </ul>
+        </div>
+
+        <div id="content">
+            <h1 id="title">Welcome!</h1>
+            <div class="slideshow">
+                <div class="slide fade">
+                    <div class="position">1 / 3</div>
+                    <img src="default.png" id="pic-1" alt="Picture 1" style="width:100%">
+                    <div class="text" id="cap-1">Caption 1</div>
+                </div>
+
+                <div class="slide fade">
+                    <div class="position">2 / 3</div>
+                    <img src="default.png" id="pic-2" alt="Picture 2" style="width:100%">
+                    <div class="text" id="cap-2">Caption 2</div>
+                </div>
+
+                <div class="slide fade">
+                    <div class="position">3 / 3</div>
+                    <img src="default.png" id="pic-3" alt="Picture 3" style="width:100%">
+                    <div class="text" id="cap-3">Caption 3</div>
+                </div>
+
+                <a class="prev" onclick="changePicture(-1)">&#10094;</a>
+                <a class="next" onclick="changePicture(1)">&#10095;</a>
+            </div><br>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="selectSlide(1)"></span>
+                <span class="dot" onclick="selectSlide(2)"></span>
+                <span class="dot" onclick="selectSlide(3)"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
